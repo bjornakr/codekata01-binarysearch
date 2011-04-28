@@ -9,13 +9,12 @@ public class BinarySearchTest {
     public void testIterativeChop() {
 	testChop(new IterativeBinarySearch());
     }
-    
+
     @Test
     public void testRecursiveChop() {
 	testChop(new RecursiveBinarySearch());
     }
-    
-    
+
     private void testChop(BinarySearch binarySearch) {
 	int[] a = { 1 };
 	int[] b = { 1, 3, 5 };
