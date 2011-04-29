@@ -12,13 +12,14 @@ public class IterativeBinarySearch implements BinarySearch {
 	startPos = 0;
 	stopPos = allValues.length - 1;
 
-	int searchResult = VALUE_NOT_FOUND;
-
 	while (startPos <= stopPos) {
-	    searchResult = searchForValue(valueToSearchFor, allValues);
+	    int searchResult = searchForValue(valueToSearchFor, allValues);
+	    if (searchResult != VALUE_NOT_FOUND) {
+		return searchResult;
+	    }
 	}
 
-	return searchResult;
+	return VALUE_NOT_FOUND;
     }
 
     private int searchForValue(int valueToSearchFor, int[] allValues) {
